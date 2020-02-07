@@ -12,13 +12,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), FirstFragment.OnFragmentCommunicationListener {
 
-    private lateinit var adapter: SectionsPagerAdapter
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        adapter = SectionsPagerAdapter(this, supportFragmentManager)
+        val adapter = SectionsPagerAdapter(this, supportFragmentManager)
         view_pager.adapter = adapter
         tabs.setupWithViewPager(view_pager)
     }
