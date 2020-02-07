@@ -11,7 +11,7 @@ import com.l3ios.fragmentcommunicationwithinterface.fragment.SecondFragment
 
 
 class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) :
-    FragmentPagerAdapter(fm) {
+    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     @StringRes
     private val TAB_TITLES = intArrayOf(
